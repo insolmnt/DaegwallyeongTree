@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: -976953855, guid: 7d5cee70dc199e04dba8f536a34bfc94, type: 3}
   m_Name: UMPSettings
   m_EditorClassIdentifier: 
-  _assetPath: Assets/UniversalMediaPlayer
+  _assetPath: Assets/04. Etc/UniversalMediaPlayer
   _useAudioSource: 0
   _useExternalLibraries: 0
-  _librariesPath: C:\Users\Singleton\Documents\UnityProjects\UniversalMediaPlayer(Standalone)\Assets\UniversalMediaPlayer\Plugins\Win\x86_64\
+  _librariesPath: 
   _playersAndroid: 3
   _playersIPhone: 3
   _androidExportedPaths: []

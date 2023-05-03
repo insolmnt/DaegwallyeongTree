@@ -46,7 +46,7 @@ public class CamManager : MonoBehaviour
 [System.Serializable]
 public class CamData
 {
-    public string Ip = "192.168.40.210";
+    public string Ip = "192.168.0.49";
     public string Id = "admin";
     public string Pass = "admin";
 }
