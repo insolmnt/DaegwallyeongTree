@@ -412,9 +412,9 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -6426645119143988072, guid: 661cdd0e34bba0d4d810d2cb8c7875bb, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 665678115}
   - key: {fileID: -3689139124967330019, guid: 661cdd0e34bba0d4d810d2cb8c7875bb, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 388429078}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &76321947
@@ -537,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &215449156
 Transform:
   m_ObjectHideFlags: 0
@@ -561,7 +561,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215449155}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -616,7 +616,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 0.3
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -637,7 +637,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 0
         m_Name: Falling leaves Amount
         m_Overridden: 1
     m_Vector2f:
@@ -661,64 +661,64 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key1: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key2: {r: 0.45153585, g: 0.06300711, b: 0.7034206, a: 1}
-          key3: {r: 0.8722979, g: 0.15750521, b: 0.93776554, a: 1}
-          key4: {r: 1.4980392, g: 0.29803923, b: 1.2862746, a: 1}
-          key5: {r: 2.633644, g: 0.7736853, b: 2.4634986, a: 1}
-          key6: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
-          key7: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
+          key0: {r: 0.6138357, g: 0.057398405, b: 0.0016239696, a: 0.9993249}
+          key1: {r: 0.94739246, g: 0.29728135, b: 0.0016239696, a: 0.99934}
+          key2: {r: 0.9960848, g: 0.44902745, b: 0.040775955, a: 0.9993472}
+          key3: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993551}
+          key4: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993568}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 1542
-          ctime2: 6554
-          ctime3: 14071
-          ctime4: 25250
-          ctime5: 52428
-          ctime6: 61102
-          ctime7: 65535
+          ctime1: 31033
+          ctime2: 45875
+          ctime3: 62066
+          ctime4: 65535
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
           atime0: 0
-          atime1: 1542
-          atime2: 6554
-          atime3: 14071
-          atime4: 25250
-          atime5: 52428
-          atime6: 61102
-          atime7: 65535
+          atime1: 31033
+          atime2: 45875
+          atime3: 62066
+          atime4: 65535
+          atime5: 0
+          atime6: 0
+          atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 8
-          m_NumAlphaKeys: 8
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Position Gradient
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 3.654902, g: 1.1290011, b: 3.4635458, a: 1}
-          key1: {r: 3.5890145, g: 1.0757048, b: 3.3744392, a: 1}
-          key2: {r: 3.5444496, g: 1.0396562, b: 3.3141694, a: 1}
-          key3: {r: 3.1278431, g: 0.70266294, b: 2.7507484, a: 1}
-          key4: {r: 3.061956, g: 0.6493667, b: 2.661642, a: 1}
-          key5: {r: 2.9960785, g: 0.59607846, b: 2.572549, a: 1}
+          key0: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993568}
+          key1: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993803}
+          key2: {r: 1, g: 0.3940454, b: 0.0016239696, a: 0.99943054}
+          key3: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.99948287}
+          key4: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.9994969}
+          key5: {r: 0, g: 0, b: 0, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 6554
-          ctime2: 10987
-          ctime3: 52428
-          ctime4: 58982
-          ctime5: 65535
+          ctime1: 10987
+          ctime2: 34502
+          ctime3: 58982
+          ctime4: 65535
+          ctime5: 0
           ctime6: 0
           ctime7: 0
           atime0: 0
-          atime1: 6554
-          atime2: 10987
-          atime3: 52428
-          atime4: 58982
-          atime5: 65535
+          atime1: 10987
+          atime2: 34502
+          atime3: 58982
+          atime4: 65535
+          atime5: 0
           atime6: 0
           atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 6
-          m_NumAlphaKeys: 6
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Leaves Colors
         m_Overridden: 1
     m_NamedObject:
@@ -728,7 +728,7 @@ VisualEffect:
         m_Overridden: 1
     m_Bool:
       m_Array:
-      - m_Value: 0
+      - m_Value: 1
         m_Name: Drop all leaves
         m_Overridden: 1
 --- !u!1 &240991040
@@ -952,7 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
       propertyPath: randomSeed
@@ -1310,7 +1310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!2083052967 &391567095
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 0.3
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -1355,7 +1355,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 0
         m_Name: Falling leaves Amount
         m_Overridden: 1
     m_Vector2f:
@@ -1379,64 +1379,64 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key1: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key2: {r: 0.45153585, g: 0.06300711, b: 0.7034206, a: 1}
-          key3: {r: 0.8722979, g: 0.15750521, b: 0.93776554, a: 1}
-          key4: {r: 1.4980392, g: 0.29803923, b: 1.2862746, a: 1}
-          key5: {r: 2.633644, g: 0.7736853, b: 2.4634986, a: 1}
-          key6: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
-          key7: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
+          key0: {r: 0.6138357, g: 0.057398405, b: 0.0016239696, a: 0.9993249}
+          key1: {r: 0.94739246, g: 0.29728135, b: 0.0016239696, a: 0.99934}
+          key2: {r: 0.9960848, g: 0.44902745, b: 0.040775955, a: 0.9993472}
+          key3: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993551}
+          key4: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993568}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 1542
-          ctime2: 6554
-          ctime3: 14071
-          ctime4: 25250
-          ctime5: 52428
-          ctime6: 61102
-          ctime7: 65535
+          ctime1: 31033
+          ctime2: 45875
+          ctime3: 62066
+          ctime4: 65535
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
           atime0: 0
-          atime1: 1542
-          atime2: 6554
-          atime3: 14071
-          atime4: 25250
-          atime5: 52428
-          atime6: 61102
-          atime7: 65535
+          atime1: 31033
+          atime2: 45875
+          atime3: 62066
+          atime4: 65535
+          atime5: 0
+          atime6: 0
+          atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 8
-          m_NumAlphaKeys: 8
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Position Gradient
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 3.654902, g: 1.1290011, b: 3.4635458, a: 1}
-          key1: {r: 3.5890145, g: 1.0757048, b: 3.3744392, a: 1}
-          key2: {r: 3.5444496, g: 1.0396562, b: 3.3141694, a: 1}
-          key3: {r: 3.1278431, g: 0.70266294, b: 2.7507484, a: 1}
-          key4: {r: 3.061956, g: 0.6493667, b: 2.661642, a: 1}
-          key5: {r: 2.9960785, g: 0.59607846, b: 2.572549, a: 1}
+          key0: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993568}
+          key1: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993803}
+          key2: {r: 1, g: 0.3940454, b: 0.0016239696, a: 0.99943054}
+          key3: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.99948287}
+          key4: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.9994969}
+          key5: {r: 0, g: 0, b: 0, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 6554
-          ctime2: 10987
-          ctime3: 52428
-          ctime4: 58982
-          ctime5: 65535
+          ctime1: 10987
+          ctime2: 34502
+          ctime3: 58982
+          ctime4: 65535
+          ctime5: 0
           ctime6: 0
           ctime7: 0
           atime0: 0
-          atime1: 6554
-          atime2: 10987
-          atime3: 52428
-          atime4: 58982
-          atime5: 65535
+          atime1: 10987
+          atime2: 34502
+          atime3: 58982
+          atime4: 65535
+          atime5: 0
           atime6: 0
           atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 6
-          m_NumAlphaKeys: 6
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Leaves Colors
         m_Overridden: 1
     m_NamedObject:
@@ -1446,7 +1446,7 @@ VisualEffect:
         m_Overridden: 1
     m_Bool:
       m_Array:
-      - m_Value: 0
+      - m_Value: 1
         m_Name: Drop all leaves
         m_Overridden: 1
 --- !u!73398921 &391567096
@@ -1457,7 +1457,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391567094}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1653,6 +1653,8 @@ PlayableDirector:
     m_References:
     - 7840212e57c4f5e47a3c29005741e8e6: {fileID: 1511987994}
     - 9709248e78620214991e0748d7a0da2d: {fileID: 1511987994}
+    - 7659286c14d82ac4d82ccdcb74701ea3: {fileID: 1023167158}
+    - ba8a914bd9f528141878be643338a93d: {fileID: 1023167158}
     - 00083bdebdac7db499a7d115394a8e15: {fileID: 1023167158}
     - 8310a35c9bd70214f99c925f4679f6ec: {fileID: 1511987994}
     - 591626d3aaa3bda48a2e7de80f77981c: {fileID: 1023167158}
@@ -4566,52 +4568,23 @@ MonoBehaviour:
   IsCahnge: 0
   CurrentTime: 1
   TargetTime: 1
-  TVal: 1
-  TargetData: {fileID: 73102359}
+  TVal: 0.040298507
+  TargetData: {fileID: 1415014170}
   StartLeavesColors:
     serializedVersion: 2
-    key0: {r: 3.654902, g: 1.1290011, b: 3.4635458, a: 1}
-    key1: {r: 2.9960785, g: 0.59607846, b: 2.572549, a: 1}
-    key2: {r: 0.93011117, g: 0.9734455, b: 0.25415218, a: 0}
-    key3: {r: 0.93011117, g: 0.9734455, b: 0.25415218, a: 0}
-    key4: {r: 0.93011117, g: 0.9734455, b: 0.25415218, a: 0}
+    key0: {r: 0.8773585, g: 0.1470493, b: 0, a: 1}
+    key1: {r: 1, g: 0.39305976, b: 0, a: 1}
+    key2: {r: 2, g: 1.5352333, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 65535
-    ctime4: 65535
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  StartPositionGradient:
-    serializedVersion: 2
-    key0: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-    key1: {r: 1.4980392, g: 0.29803923, b: 1.2862746, a: 1}
-    key2: {r: 2.9960785, g: 0.9254902, b: 2.8392158, a: 0}
-    key3: {r: 0.93011117, g: 0.9734455, b: 0.25415218, a: 0}
-    key4: {r: 0.93011117, g: 0.9734455, b: 0.25415218, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 1542
-    ctime1: 25250
-    ctime2: 61102
-    ctime3: 65535
-    ctime4: 65535
+    ctime0: 10987
+    ctime1: 34502
+    ctime2: 58982
+    ctime3: 0
+    ctime4: 0
     ctime5: 0
     ctime6: 0
     ctime7: 0
@@ -4625,6 +4598,35 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  StartPositionGradient:
+    serializedVersion: 2
+    key0: {r: 0.6132076, g: 0.055865157, b: 0, a: 1}
+    key1: {r: 0.9473069, g: 0.29613832, b: 0, a: 1}
+    key2: {r: 0.99607843, g: 0.44813123, b: 0.03921567, a: 0}
+    key3: {r: 0.89119315, g: 0.9516823, b: 0.12698342, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 31033
+    ctime2: 45875
+    ctime3: 62066
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
 --- !u!4 &878335454
 Transform:
@@ -8708,7 +8710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1023167159
 Transform:
   m_ObjectHideFlags: 0
@@ -9591,11 +9593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011092933414, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000011503386248, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000011507014474, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: m_IsActive
@@ -9603,11 +9605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011924099192, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000013364424978, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000010211703900, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9659,7 +9661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000010220598782, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000010220598782, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: randomSeed
@@ -9675,7 +9677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000013250129982, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000013250129982, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: prewarm
@@ -9695,7 +9697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000013866684486, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000013866684486, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: prewarm
@@ -9739,7 +9741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198000014279566986, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198000014279566986, guid: d0c0b49979d372942ae5a964d9364111, type: 3}
       propertyPath: randomSeed
@@ -9863,7 +9865,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 0.39697453
+      - m_Value: 0.3
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -9884,7 +9886,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 0
         m_Name: Falling leaves Amount
         m_Overridden: 1
     m_Vector2f:
@@ -9908,64 +9910,64 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key1: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key2: {r: 0.45153585, g: 0.06300711, b: 0.7034206, a: 1}
-          key3: {r: 0.8722979, g: 0.15750521, b: 0.93776554, a: 1}
-          key4: {r: 1.4980392, g: 0.29803923, b: 1.2862746, a: 1}
-          key5: {r: 2.633644, g: 0.7736853, b: 2.4634986, a: 1}
-          key6: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
-          key7: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
+          key0: {r: 0.6138357, g: 0.057398405, b: 0.0016239696, a: 0.9993249}
+          key1: {r: 0.94739246, g: 0.29728135, b: 0.0016239696, a: 0.99934}
+          key2: {r: 0.9960848, g: 0.44902745, b: 0.040775955, a: 0.9993472}
+          key3: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993551}
+          key4: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993568}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 1542
-          ctime2: 6554
-          ctime3: 14071
-          ctime4: 25250
-          ctime5: 52428
-          ctime6: 61102
-          ctime7: 65535
+          ctime1: 31033
+          ctime2: 45875
+          ctime3: 62066
+          ctime4: 65535
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
           atime0: 0
-          atime1: 1542
-          atime2: 6554
-          atime3: 14071
-          atime4: 25250
-          atime5: 52428
-          atime6: 61102
-          atime7: 65535
+          atime1: 31033
+          atime2: 45875
+          atime3: 62066
+          atime4: 65535
+          atime5: 0
+          atime6: 0
+          atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 8
-          m_NumAlphaKeys: 8
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Position Gradient
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 3.654902, g: 1.1290011, b: 3.4635458, a: 1}
-          key1: {r: 3.5890145, g: 1.0757048, b: 3.3744392, a: 1}
-          key2: {r: 3.5444496, g: 1.0396562, b: 3.3141694, a: 1}
-          key3: {r: 3.1278431, g: 0.70266294, b: 2.7507484, a: 1}
-          key4: {r: 3.061956, g: 0.6493667, b: 2.661642, a: 1}
-          key5: {r: 2.9960785, g: 0.59607846, b: 2.572549, a: 1}
+          key0: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993568}
+          key1: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993803}
+          key2: {r: 1, g: 0.3940454, b: 0.0016239696, a: 0.99943054}
+          key3: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.99948287}
+          key4: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.9994969}
+          key5: {r: 0, g: 0, b: 0, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 6554
-          ctime2: 10987
-          ctime3: 52428
-          ctime4: 58982
-          ctime5: 65535
+          ctime1: 10987
+          ctime2: 34502
+          ctime3: 58982
+          ctime4: 65535
+          ctime5: 0
           ctime6: 0
           ctime7: 0
           atime0: 0
-          atime1: 6554
-          atime2: 10987
-          atime3: 52428
-          atime4: 58982
-          atime5: 65535
+          atime1: 10987
+          atime2: 34502
+          atime3: 58982
+          atime4: 65535
+          atime5: 0
           atime6: 0
           atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 6
-          m_NumAlphaKeys: 6
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Leaves Colors
         m_Overridden: 1
     m_NamedObject:
@@ -10127,7 +10129,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.0066285
+      - m_Value: 0.30014455
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -10148,7 +10150,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 0
         m_Name: Falling leaves Amount
         m_Overridden: 1
     m_Vector2f:
@@ -10172,64 +10174,64 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key1: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key2: {r: 0.45153585, g: 0.06300711, b: 0.7034206, a: 1}
-          key3: {r: 0.8722979, g: 0.15750521, b: 0.93776554, a: 1}
-          key4: {r: 1.4980392, g: 0.29803923, b: 1.2862746, a: 1}
-          key5: {r: 2.633644, g: 0.7736853, b: 2.4634986, a: 1}
-          key6: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
-          key7: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
+          key0: {r: 0.6138357, g: 0.057398405, b: 0.0016239696, a: 0.9993249}
+          key1: {r: 0.94739246, g: 0.29728135, b: 0.0016239696, a: 0.99934}
+          key2: {r: 0.9960848, g: 0.44902745, b: 0.040775955, a: 0.9993472}
+          key3: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993551}
+          key4: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993568}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 1542
-          ctime2: 6554
-          ctime3: 14071
-          ctime4: 25250
-          ctime5: 52428
-          ctime6: 61102
-          ctime7: 65535
+          ctime1: 31033
+          ctime2: 45875
+          ctime3: 62066
+          ctime4: 65535
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
           atime0: 0
-          atime1: 1542
-          atime2: 6554
-          atime3: 14071
-          atime4: 25250
-          atime5: 52428
-          atime6: 61102
-          atime7: 65535
+          atime1: 31033
+          atime2: 45875
+          atime3: 62066
+          atime4: 65535
+          atime5: 0
+          atime6: 0
+          atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 8
-          m_NumAlphaKeys: 8
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Position Gradient
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 3.654902, g: 1.1290011, b: 3.4635458, a: 1}
-          key1: {r: 3.5890145, g: 1.0757048, b: 3.3744392, a: 1}
-          key2: {r: 3.5444496, g: 1.0396562, b: 3.3141694, a: 1}
-          key3: {r: 3.1278431, g: 0.70266294, b: 2.7507484, a: 1}
-          key4: {r: 3.061956, g: 0.6493667, b: 2.661642, a: 1}
-          key5: {r: 2.9960785, g: 0.59607846, b: 2.572549, a: 1}
+          key0: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993568}
+          key1: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993803}
+          key2: {r: 1, g: 0.3940454, b: 0.0016239696, a: 0.99943054}
+          key3: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.99948287}
+          key4: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.9994969}
+          key5: {r: 0, g: 0, b: 0, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 6554
-          ctime2: 10987
-          ctime3: 52428
-          ctime4: 58982
-          ctime5: 65535
+          ctime1: 10987
+          ctime2: 34502
+          ctime3: 58982
+          ctime4: 65535
+          ctime5: 0
           ctime6: 0
           ctime7: 0
           atime0: 0
-          atime1: 6554
-          atime2: 10987
-          atime3: 52428
-          atime4: 58982
-          atime5: 65535
+          atime1: 10987
+          atime2: 34502
+          atime3: 58982
+          atime4: 65535
+          atime5: 0
           atime6: 0
           atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 6
-          m_NumAlphaKeys: 6
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Leaves Colors
         m_Overridden: 1
     m_NamedObject:
@@ -10385,7 +10387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1314100834436882, guid: f425f9c3a9f10c14e95822bcab0e646d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1807039652713660, guid: f425f9c3a9f10c14e95822bcab0e646d, type: 3}
       propertyPath: m_IsActive
@@ -10549,7 +10551,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449808605}
-  m_LocalRotation: {x: -0, y: 0.8374231, z: -0, w: 0.54655516}
+  m_LocalRotation: {x: 0, y: 0.8374231, z: 0, w: 0.54655516}
   m_LocalPosition: {x: -4.488, y: 0, z: 0.564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10557,7 +10559,7 @@ Transform:
   - {fileID: 1630312887}
   m_Father: {fileID: 1023167159}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 359.1477, z: 0}
 --- !u!1 &1511987994
 GameObject:
   m_ObjectHideFlags: 0
@@ -10749,7 +10751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1597798395
 Transform:
   m_ObjectHideFlags: 0
@@ -10773,7 +10775,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597798394}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -10828,7 +10830,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 0.3
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -10849,7 +10851,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 0
         m_Name: Falling leaves Amount
         m_Overridden: 1
     m_Vector2f:
@@ -10873,64 +10875,64 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key1: {r: 0.17099056, g: 0, b: 0.5471698, a: 1}
-          key2: {r: 0.45153585, g: 0.06300711, b: 0.7034206, a: 1}
-          key3: {r: 0.8722979, g: 0.15750521, b: 0.93776554, a: 1}
-          key4: {r: 1.4980392, g: 0.29803923, b: 1.2862746, a: 1}
-          key5: {r: 2.633644, g: 0.7736853, b: 2.4634986, a: 1}
-          key6: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
-          key7: {r: 2.9960785, g: 0.92549014, b: 2.8392158, a: 1}
+          key0: {r: 0.6138357, g: 0.057398405, b: 0.0016239696, a: 0.9993249}
+          key1: {r: 0.94739246, g: 0.29728135, b: 0.0016239696, a: 0.99934}
+          key2: {r: 0.9960848, g: 0.44902745, b: 0.040775955, a: 0.9993472}
+          key3: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993551}
+          key4: {r: 0.8913699, g: 0.95176077, b: 0.12840118, a: 0.9993568}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 1542
-          ctime2: 6554
-          ctime3: 14071
-          ctime4: 25250
-          ctime5: 52428
-          ctime6: 61102
-          ctime7: 65535
+          ctime1: 31033
+          ctime2: 45875
+          ctime3: 62066
+          ctime4: 65535
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
           atime0: 0
-          atime1: 1542
-          atime2: 6554
-          atime3: 14071
-          atime4: 25250
-          atime5: 52428
-          atime6: 61102
-          atime7: 65535
+          atime1: 31033
+          atime2: 45875
+          atime3: 62066
+          atime4: 65535
+          atime5: 0
+          atime6: 0
+          atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 8
-          m_NumAlphaKeys: 8
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Position Gradient
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 3.654902, g: 1.1290011, b: 3.4635458, a: 1}
-          key1: {r: 3.5890145, g: 1.0757048, b: 3.3744392, a: 1}
-          key2: {r: 3.5444496, g: 1.0396562, b: 3.3141694, a: 1}
-          key3: {r: 3.1278431, g: 0.70266294, b: 2.7507484, a: 1}
-          key4: {r: 3.061956, g: 0.6493667, b: 2.661642, a: 1}
-          key5: {r: 2.9960785, g: 0.59607846, b: 2.572549, a: 1}
+          key0: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993568}
+          key1: {r: 0.87755764, g: 0.14843446, b: 0.0016239696, a: 0.9993803}
+          key2: {r: 1, g: 0.3940454, b: 0.0016239696, a: 0.99943054}
+          key3: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.99948287}
+          key4: {r: 1.998376, g: 1.5343641, b: 0.0016239696, a: 0.9994969}
+          key5: {r: 0, g: 0, b: 0, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
-          ctime1: 6554
-          ctime2: 10987
-          ctime3: 52428
-          ctime4: 58982
-          ctime5: 65535
+          ctime1: 10987
+          ctime2: 34502
+          ctime3: 58982
+          ctime4: 65535
+          ctime5: 0
           ctime6: 0
           ctime7: 0
           atime0: 0
-          atime1: 6554
-          atime2: 10987
-          atime3: 52428
-          atime4: 58982
-          atime5: 65535
+          atime1: 10987
+          atime2: 34502
+          atime3: 58982
+          atime4: 65535
+          atime5: 0
           atime6: 0
           atime7: 0
           m_Mode: 0
-          m_NumColorKeys: 6
-          m_NumAlphaKeys: 6
+          m_NumColorKeys: 5
+          m_NumAlphaKeys: 5
         m_Name: Leaves Colors
         m_Overridden: 1
     m_NamedObject:
@@ -10940,7 +10942,7 @@ VisualEffect:
         m_Overridden: 1
     m_Bool:
       m_Array:
-      - m_Value: 0
+      - m_Value: 1
         m_Name: Drop all leaves
         m_Overridden: 1
 --- !u!1 &1626583233
@@ -12415,6 +12417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.7935855
       objectReference: {fileID: 0}
+    - target: {fileID: 4468570648192456, guid: 01173114f5c6b34448f88a989cb04b6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4553341103311666, guid: 01173114f5c6b34448f88a989cb04b6e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.6478607
@@ -12794,6 +12800,10 @@ PrefabInstance:
     - target: {fileID: 4957834793760888, guid: 01173114f5c6b34448f88a989cb04b6e, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 95121386228153832, guid: 01173114f5c6b34448f88a989cb04b6e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137339504945441980, guid: 01173114f5c6b34448f88a989cb04b6e, type: 3}
       propertyPath: m_StaticShadowCaster
