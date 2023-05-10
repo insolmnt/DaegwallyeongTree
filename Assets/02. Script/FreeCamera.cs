@@ -48,6 +48,7 @@ public class FreeCamera : MonoBehaviour
 		Load();
 	}
 
+	[ContextMenu("Save")]
 	public void Save()
 	{
 		Data.Position = transform.position;
@@ -56,11 +57,9 @@ public class FreeCamera : MonoBehaviour
 
 		DataManager.SetData<FreeCameraData>(DataKey, Data);
 
-		//if (UIManager.Instance != null)
-		//{
-		//	UIManager.Instance.ShowMessage("저장 완료");
-		//}
+		UiManager.Instance.ShowMessage("저장완료");
 	}
+	[ContextMenu("Load")]
 	public void Load()
 	{
 		Data = DataManager.GetData<FreeCameraData>(DataKey);
@@ -92,6 +91,8 @@ public class FreeCamera : MonoBehaviour
 
 		m_yaw = transform.eulerAngles.y;
 		m_pitch = transform.eulerAngles.x;
+
+		UiManager.Instance.ShowMessage("되돌리기");
 		//if (UIManager.Instance != null)
 		//{
 		//	UIManager.Instance.ShowMessage("기본값 복원 (End키를 눌러서 저장 필요)");
@@ -107,18 +108,18 @@ public class FreeCamera : MonoBehaviour
             {
 				CaptureInput();
 
-				//if (UIManager.Instance != null)
-				//{
-				//	UIManager.Instance.ShowMessage("카메라 이동 활성화");
-				//}
+				if (UiManager.Instance != null)
+				{
+					UiManager.Instance.ShowMessage("카메라 이동 활성화");
+				}
 			}
             else
             {
 				ReleaseInput();
-				//if (UIManager.Instance != null)
-				//{
-				//	UIManager.Instance.ShowMessage("카메라 이동 비활성화");
-				//}
+				if (UiManager.Instance != null)
+				{
+					UiManager.Instance.ShowMessage("카메라 이동 비활성화");
+				}
 
 			}
 		}

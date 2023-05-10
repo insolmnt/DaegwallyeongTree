@@ -23,6 +23,8 @@ public class SeasonTree : MonoBehaviour
     public PlayableDirector RabbitTimeline;
 
     [Header("Data")]
+    public TreeData Data;
+
     public int CurrentSeason = -1;
     public bool IsCahnge = false;
     public float CurrentTime = 0;
@@ -40,6 +42,9 @@ public class SeasonTree : MonoBehaviour
 
     private void Start()
     {
+        Load();
+        Save();
+
         foreach(var data in SeasonData)
         {
             foreach(var pa in data.Particle)
@@ -52,28 +57,49 @@ public class SeasonTree : MonoBehaviour
             vfx.gameObject.SetActive(false);
         }
 
+        
+
         CurrentSeason = -1;
         SeasonChange(0);
+
+
+    }
+    public void Save()
+    {
+        DataManager.SetData("Tree", Data);
+    }
+    public void Load()
+    {
+        Data = DataManager.GetData<TreeData>("Tree");
+        if(Data == null)
+        {
+            Data = new TreeData();
+        }
+
+        for(int i=0; i<5; i++)
+        {
+            VfxList[i].SetFloat("Leaves Amount", Data.VfxAmount[i]);
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SeasonChange(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SeasonChange(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SeasonChange(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            SeasonChange(3);
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    SeasonChange(0);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    SeasonChange(1);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    SeasonChange(2);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    SeasonChange(3);
+        //}
         if (IsCahnge)
         {
             CurrentTime += Time.deltaTime;
@@ -340,6 +366,12 @@ public class SeasonTree : MonoBehaviour
         SetSeason(3);
     }
 
+}
+
+[System.Serializable]
+public class TreeData
+{
+    public int[] VfxAmount = new int[] { 200, 500, 1000, 2000, 2000 };
 }
 
 

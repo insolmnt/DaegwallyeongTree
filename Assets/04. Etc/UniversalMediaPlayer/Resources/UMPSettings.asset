@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _assetPath: Assets/04. Etc/UniversalMediaPlayer
   _useAudioSource: 0
-  _useExternalLibraries: 0
-  _librariesPath: 
+  _useExternalLibraries: 1
+  _librariesPath: C:\Work\DaegwallyeongTree\Assets\04. Etc\UniversalMediaPlayer\Plugins\Win\x86_64\
   _playersAndroid: 3
   _playersIPhone: 3
   _androidExportedPaths: []

@@ -1,0 +1,13 @@
+{
+    "LocalLatitude": 37.67713165283203,
+    "LocalLongitude": 128.7183380126953,
+    "StandrdLongitude": 135,
+    "Rotation": 139.07464599609376,
+    "OffsetMinute": 0,
+    "ShadowColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.75
+    }
+}

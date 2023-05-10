@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class SunManager : MonoBehaviour
 {
+    public Renderer ShadowPlane;
+
+    [Header ("")]
     public SunManagerData Data;
+
 
     [Header("")]
     public bool IsNow = false;
@@ -43,19 +47,32 @@ public class SunManager : MonoBehaviour
 
     public void Save()
     {
-
+        DataManager.SetData("Sun", Data);
     }
     public void Load()
     {
-        Data = new SunManagerData();
+        Data = DataManager.GetData<SunManagerData>("Sun");
+        if(Data == null)
+        {
+            Data = new SunManagerData();
+        }
 
+        SetRotation();
         CalculateDay();
+
+        SetSahdowColor();
+    }
+
+    public void SetSahdowColor()
+    {
+        ShadowPlane.sharedMaterial.SetColor("Color_72bc1e57291a4e8dadc03f5e475acd62", Data.ShadowColor);
     }
 
 
 
     private void OnValidate()
     {
+        SetRotation();
         Ca();
         //CalculateDay();
         //Calculate();
@@ -78,6 +95,10 @@ public class SunManager : MonoBehaviour
         // 북반구 + 
         // 남반구 -
         solar_declination = (float)(23.45 * Math.Sin(Mathf.Deg2Rad * 360.0 / 365 * (284 + day_of_year)));
+    }
+    public void SetRotation()
+    {
+        transform.localEulerAngles = new Vector3(0, Data.Rotation, 0);
     }
 
     [ContextMenu("계산")]
@@ -184,7 +205,7 @@ public class SunManager : MonoBehaviour
 
 
 
-    void Ca()
+    public void Ca()
     {
         float d = 367 * Year - 7 * (Year + (Month / 12 + 9) / 12) / 4 + 275 * Month / 9 + Day - 730530;
         internalHour = Hour + ((Min + Data.OffsetMinute) * 0.0166667f) + (Sec * 0.000277778f);
@@ -292,9 +313,11 @@ public class SunManager : MonoBehaviour
 
 public class SunManagerData
 {
-    public float LocalLatitude = 37.478f; //35.8393
-    public float LocalLongitude = 127.148f; //128.4877
+    public float LocalLatitude = 37.67713f; //35.8393
+    public float LocalLongitude = 128.71834f; //128.4877
     public int StandrdLongitude = 135;
     public float Rotation;
     public int OffsetMinute = 0;
+
+    public Color ShadowColor = new Color(0, 0, 0, 0.75f);
 }

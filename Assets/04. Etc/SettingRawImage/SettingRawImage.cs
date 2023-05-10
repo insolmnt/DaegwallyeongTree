@@ -24,15 +24,22 @@ public class SettingRawImage : MonoBehaviour
     public Toggle FlipXToggle;
     public Toggle FlipYToggle;
 
+    public Slider ViewRectXSlider;
+    public Slider ViewRectWidthSlider;
+    public Slider ViewRectYSlider;
+    public Slider ViewRectHeightSlider;
+
     [Header("Data")]
     public RawImageData Data;
 
 
 
+    [ContextMenu("Save")]
     public void Save()
     {
         DataManager.SetData(Section, Data);
     }
+    [ContextMenu("Load")]
     public void Load()
     {
         Data = DataManager.GetData<RawImageData>(Section);
@@ -41,6 +48,7 @@ public class SettingRawImage : MonoBehaviour
             Data = new RawImageData();
         }
         SetKeystone();
+        SetViewRect();
     }
 
     public void OnFlipXToggleChange()
@@ -54,6 +62,25 @@ public class SettingRawImage : MonoBehaviour
         Raw.flipY = Data.FlipY;
     }
 
+    public void OnViewRectSliderChange()
+    {
+        if(mIsLoad == false)
+        {
+            return;
+        }
+
+
+        Data.ViewRect.x = ViewRectXSlider.value;
+        Data.ViewRect.y = ViewRectYSlider.value;
+        Data.ViewRect.width = ViewRectWidthSlider.value;
+        Data.ViewRect.height = ViewRectHeightSlider.value;
+        SetViewRect();
+    }
+
+    public void SetViewRect()
+    {
+        Raw.uvRect = Data.ViewRect;
+    }
     public void SetKeystone()
     {
         Raw.flipX = Data.FlipX;
@@ -127,6 +154,7 @@ public class SettingRawImage : MonoBehaviour
 
     [Header("Data")]
     public bool IsShowKeystoneSetting = false;
+    private bool mIsLoad = false;
     public void ShowKeystoneSetting(bool isShow)
     {
         keyCheck = false;
@@ -141,14 +169,23 @@ public class SettingRawImage : MonoBehaviour
         //MultiDisplayManagerUI.Instance.CheckKeystoneAlpha();
         if (isShow)
         {
+            mIsLoad = false;
             gameObject.SetActive(true); //Monitor.IsUse
             KeystoneSettingPanel.alpha = 1;
             //OutputRawImagePrefab.gameObject.SetActive(); //Monitor.IsUse
             OnlyStraightToggle.isOn = Data.isOnltyStraight;
             FlipXToggle.isOn = Data.FlipX;
             FlipYToggle.isOn = Data.FlipY;
+
+            ViewRectXSlider.value = Data.ViewRect.x;
+            ViewRectYSlider.value = Data.ViewRect.y;
+            ViewRectWidthSlider.value = Data.ViewRect.width;
+            ViewRectHeightSlider.value = Data.ViewRect.height;
+
+            mIsLoad = true;
             SetButtonText();
             SetData();
+            SetViewRect();
         }
         else
         {
@@ -1070,4 +1107,5 @@ public class RawImageData
 
     public bool FlipX = false;
     public bool FlipY = false;
+    public Rect ViewRect = new Rect(0, 0, 1, 1);
 }
