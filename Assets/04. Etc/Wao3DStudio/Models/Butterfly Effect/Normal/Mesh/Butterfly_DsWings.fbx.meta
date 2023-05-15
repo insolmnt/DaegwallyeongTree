@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: 260375c0c7f7008408d06f06651974a9
+timeCreated: 1495215666
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Anim
+    100002: Antena
+    100004: Antena CTRL
+    100006: Antena CTRL_end
+    100008: Antena CTRL_end_end
+    100010: Antena CTRL_end_end_end
+    100012: Antena.001
+    100014: Antena.002
+    100016: Antena.003
+    100018: Antena.004
+    100020: Antena.005
+    100022: Antena.006
+    100024: Antena.007
+    100026: Antena.008
+    100028: Antena.009
+    100030: Antena.009_end
+    100032: Antena.009_end_end
+    100034: Antena.009_end_end_end
+    100036: Base_CTRL
+    100038: Bone.007
+    100040: Bone.007_end
+    100042: Bone.007_end_end
+    100044: Bone.007_end_end_end
+    100046: Butterfly Body
+    100048: Butterfly Wigs
+    100050: //RootNode
+    100052: L.Back_Foot CTRL
+    100054: L.Back_Foot CTRL_end
+    100056: L.Back_Foot CTRL_end_end
+    100058: L.Back_Foot CTRL_end_end_end
+    100060: L.Back_leg
+    100062: L.Back_leg.001
+    100064: L.Back_leg.002
+    100066: L.Back_leg.003
+    100068: L.Back_leg.004
+    100070: L.Back_leg.005
+    100072: L.Back_leg.005_end
+    100074: L.Back_leg.005_end_end
+    100076: L.Back_leg.005_end_end_end
+    100078: L.Back_leg_Dir_CTRL
+    100080: L.Back_leg_Dir_CTRL_end
+    100082: L.Back_leg_Dir_CTRL_end_end
+    100084: L.Back_leg_Dir_CTRL_end_end_end
+    100086: L.front_Foot_CTRL
+    100088: L.front_Foot_CTRL_end
+    100090: L.front_Foot_CTRL_end_end
+    100092: L.front_Foot_CTRL_end_end_end
+    100094: L.front_leg
+    100096: L.front_leg.001
+    100098: L.front_leg.002
+    100100: L.front_leg.003
+    100102: L.front_leg.004
+    100104: L.front_leg.005
+    100106: L.front_leg.006
+    100108: L.front_leg.006_end
+    100110: L.front_leg.006_end_end
+    100112: L.front_leg.006_end_end_end
+    100114: L.front_leg_Dir_CTRL
+    100116: L.front_leg_Dir_CTRL_end
+    100118: L.front_leg_Dir_CTRL_end_end
+    100120: L.front_leg_Dir_CTRL_end_end_end
+    100122: L.Middle_Foot_CTRL
+    100124: L.Middle_Foot_CTRL_end
+    100126: L.Middle_Foot_CTRL_end_end
+    100128: L.Middle_Foot_CTRL_end_end_end
+    100130: L.Middle_leg
+    100132: L.Middle_leg.001
+    100134: L.Middle_leg.002
+    100136: L.Middle_leg.003
+    100138: L.Middle_leg.004
+    100140: L.Middle_leg.005
+    100142: L.Middle_leg.005_end
+    100144: L.Middle_leg.005_end_end
+    100146: L.Middle_leg.005_end_end_end
+    100148: L.Middle_leg_Dir_CTRL
+    100150: L.Middle_leg_Dir_CTRL_end
+    100152: L.Middle_leg_Dir_CTRL_end_end
+    100154: L.Middle_leg_Dir_CTRL_end_end_end
+    100156: L.Wing_middle
+    100158: L.Wing_middle.001
+    100160: L.Wing_middle.002
+    100162: L.Wing_middle.003
+    100164: L.Wing_middle.004
+    100166: L.Wing_middle.005
+    100168: L.Wing_middle.006
+    100170: L.Wing_middle.006_end
+    100172: L.Wing_middle.006_end_end
+    100174: L.Wing_middle.006_end_end_end
+    100176: R.Back_Foot CTRL
+    100178: R.Back_Foot CTRL_end
+    100180: R.Back_Foot CTRL_end_end
+    100182: R.Back_Foot CTRL_end_end_end
+    100184: R.Back_leg
+    100186: R.Back_leg.001
+    100188: R.Back_leg.002
+    100190: R.Back_leg.003
+    100192: R.Back_leg.004
+    100194: R.Back_leg.005
+    100196: R.Back_leg.005_end
+    100198: R.Back_leg.005_end_end
+    100200: R.Back_leg.005_end_end_end
+    100202: R.Back_leg_Dir_CTRL
+    100204: R.Back_leg_Dir_CTRL_end
+    100206: R.Back_leg_Dir_CTRL_end_end
+    100208: R.Back_leg_Dir_CTRL_end_end_end
+    100210: R.front_Foot_CTRL
+    100212: R.front_Foot_CTRL_end
+    100214: R.front_Foot_CTRL_end_end
+    100216: R.front_Foot_CTRL_end_end_end
+    100218: R.front_leg
+    100220: R.front_leg.001
+    100222: R.front_leg.002
+    100224: R.front_leg.003
+    100226: R.front_leg.004
+    100228: R.front_leg.005
+    100230: R.front_leg.006
+    100232: R.front_leg.006_end
+    100234: R.front_leg.006_end_end
+    100236: R.front_leg.006_end_end_end
+    100238: R.front_leg_Dir_CTRL
+    100240: R.front_leg_Dir_CTRL_end
+    100242: R.front_leg_Dir_CTRL_end_end
+    100244: R.front_leg_Dir_CTRL_end_end_end
+    100246: R.Middle_Foot_CTRL
+    100248: R.Middle_Foot_CTRL_end
+    100250: R.Middle_Foot_CTRL_end_end
+    100252: R.Middle_Foot_CTRL_end_end_end
+    100254: R.Middle_leg
+    100256: R.Middle_leg.001
+    100258: R.Middle_leg.002
+    100260: R.Middle_leg.003
+    100262: R.Middle_leg.004
+    100264: R.Middle_leg.005
+    100266: R.Middle_leg.005_end
+    100268: R.Middle_leg.005_end_end
+    100270: R.Middle_leg.005_end_end_end
+    100272: R.Middle_leg_Dir_CTRL
+    100274: R.Middle_leg_Dir_CTRL_end
+    100276: R.Middle_leg_Dir_CTRL_end_end
+    100278: R.Middle_leg_Dir_CTRL_end_end_end
+    100280: R.Wing_middle
+    100282: R.Wing_middle.001
+    100284: R.Wing_middle.002
+    100286: R.Wing_middle.003
+    100288: R.Wing_middle.004
+    100290: R.Wing_middle.005
+    100292: R.Wing_middle.006
+    100294: R.Wing_middle.006_end
+    100296: R.Wing_middle.006_end_end
+    100298: R.Wing_middle.006_end_end_end
+    100300: Root
+    100302: Spine.001
+    100304: Spine.002
+    100306: Spine.003
+    100308: Spine.004
+    100310: Spine_CTRL
+    100312: Spine_CTRL_end
+    100314: Spine_CTRL_end_end
+    100316: Spine_CTRL_end_end_end
+    100318: Tail
+    100320: Tail.001
+    100322: Tail.002
+    100324: Tail.003
+    100326: Tail.003_end
+    100328: Tail.003_end_end
+    100330: Tail.003_end_end_end
+    100332: Tail.004
+    100334: Tail.004_end
+    100336: Tail.004_end_end
+    100338: Tail.004_end_end_end
+    400000: Anim
+    400002: Antena
+    400004: Antena CTRL
+    400006: Antena CTRL_end
+    400008: Antena CTRL_end_end
+    400010: Antena CTRL_end_end_end
+    400012: Antena.001
+    400014: Antena.002
+    400016: Antena.003
+    400018: Antena.004
+    400020: Antena.005
+    400022: Antena.006
+    400024: Antena.007
+    400026: Antena.008
+    400028: Antena.009
+    400030: Antena.009_end
+    400032: Antena.009_end_end
+    400034: Antena.009_end_end_end
+    400036: Base_CTRL
+    400038: Bone.007
+    400040: Bone.007_end
+    400042: Bone.007_end_end
+    400044: Bone.007_end_end_end
+    400046: Butterfly Body
+    400048: Butterfly Wigs
+    400050: //RootNode
+    400052: L.Back_Foot CTRL
+    400054: L.Back_Foot CTRL_end
+    400056: L.Back_Foot CTRL_end_end
+    400058: L.Back_Foot CTRL_end_end_end
+    400060: L.Back_leg
+    400062: L.Back_leg.001
+    400064: L.Back_leg.002
+    400066: L.Back_leg.003
+    400068: L.Back_leg.004
+    400070: L.Back_leg.005
+    400072: L.Back_leg.005_end
+    400074: L.Back_leg.005_end_end
+    400076: L.Back_leg.005_end_end_end
+    400078: L.Back_leg_Dir_CTRL
+    400080: L.Back_leg_Dir_CTRL_end
+    400082: L.Back_leg_Dir_CTRL_end_end
+    400084: L.Back_leg_Dir_CTRL_end_end_end
+    400086: L.front_Foot_CTRL
+    400088: L.front_Foot_CTRL_end
+    400090: L.front_Foot_CTRL_end_end
+    400092: L.front_Foot_CTRL_end_end_end
+    400094: L.front_leg
+    400096: L.front_leg.001
+    400098: L.front_leg.002
+    400100: L.front_leg.003
+    400102: L.front_leg.004
+    400104: L.front_leg.005
+    400106: L.front_leg.006
+    400108: L.front_leg.006_end
+    400110: L.front_leg.006_end_end
+    400112: L.front_leg.006_end_end_end
+    400114: L.front_leg_Dir_CTRL
+    400116: L.front_leg_Dir_CTRL_end
+    400118: L.front_leg_Dir_CTRL_end_end
+    400120: L.front_leg_Dir_CTRL_end_end_end
+    400122: L.Middle_Foot_CTRL
+    400124: L.Middle_Foot_CTRL_end
+    400126: L.Middle_Foot_CTRL_end_end
+    400128: L.Middle_Foot_CTRL_end_end_end
+    400130: L.Middle_leg
+    400132: L.Middle_leg.001
+    400134: L.Middle_leg.002
+    400136: L.Middle_leg.003
+    400138: L.Middle_leg.004
+    400140: L.Middle_leg.005
+    400142: L.Middle_leg.005_end
+    400144: L.Middle_leg.005_end_end
+    400146: L.Middle_leg.005_end_end_end
+    400148: L.Middle_leg_Dir_CTRL
+    400150: L.Middle_leg_Dir_CTRL_end
+    400152: L.Middle_leg_Dir_CTRL_end_end
+    400154: L.Middle_leg_Dir_CTRL_end_end_end
+    400156: L.Wing_middle
+    400158: L.Wing_middle.001
+    400160: L.Wing_middle.002
+    400162: L.Wing_middle.003
+    400164: L.Wing_middle.004
+    400166: L.Wing_middle.005
+    400168: L.Wing_middle.006
+    400170: L.Wing_middle.006_end
+    400172: L.Wing_middle.006_end_end
+    400174: L.Wing_middle.006_end_end_end
+    400176: R.Back_Foot CTRL
+    400178: R.Back_Foot CTRL_end
+    400180: R.Back_Foot CTRL_end_end
+    400182: R.Back_Foot CTRL_end_end_end
+    400184: R.Back_leg
+    400186: R.Back_leg.001
+    400188: R.Back_leg.002
+    400190: R.Back_leg.003
+    400192: R.Back_leg.004
+    400194: R.Back_leg.005
+    400196: R.Back_leg.005_end
+    400198: R.Back_leg.005_end_end
+    400200: R.Back_leg.005_end_end_end
+    400202: R.Back_leg_Dir_CTRL
+    400204: R.Back_leg_Dir_CTRL_end
+    400206: R.Back_leg_Dir_CTRL_end_end
+    400208: R.Back_leg_Dir_CTRL_end_end_end
+    400210: R.front_Foot_CTRL
+    400212: R.front_Foot_CTRL_end
+    400214: R.front_Foot_CTRL_end_end
+    400216: R.front_Foot_CTRL_end_end_end
+    400218: R.front_leg
+    400220: R.front_leg.001
+    400222: R.front_leg.002
+    400224: R.front_leg.003
+    400226: R.front_leg.004
+    400228: R.front_leg.005
+    400230: R.front_leg.006
+    400232: R.front_leg.006_end
+    400234: R.front_leg.006_end_end
+    400236: R.front_leg.006_end_end_end
+    400238: R.front_leg_Dir_CTRL
+    400240: R.front_leg_Dir_CTRL_end
+    400242: R.front_leg_Dir_CTRL_end_end
+    400244: R.front_leg_Dir_CTRL_end_end_end
+    400246: R.Middle_Foot_CTRL
+    400248: R.Middle_Foot_CTRL_end
+    400250: R.Middle_Foot_CTRL_end_end
+    400252: R.Middle_Foot_CTRL_end_end_end
+    400254: R.Middle_leg
+    400256: R.Middle_leg.001
+    400258: R.Middle_leg.002
+    400260: R.Middle_leg.003
+    400262: R.Middle_leg.004
+    400264: R.Middle_leg.005
+    400266: R.Middle_leg.005_end
+    400268: R.Middle_leg.005_end_end
+    400270: R.Middle_leg.005_end_end_end
+    400272: R.Middle_leg_Dir_CTRL
+    400274: R.Middle_leg_Dir_CTRL_end
+    400276: R.Middle_leg_Dir_CTRL_end_end
+    400278: R.Middle_leg_Dir_CTRL_end_end_end
+    400280: R.Wing_middle
+    400282: R.Wing_middle.001
+    400284: R.Wing_middle.002
+    400286: R.Wing_middle.003
+    400288: R.Wing_middle.004
+    400290: R.Wing_middle.005
+    400292: R.Wing_middle.006
+    400294: R.Wing_middle.006_end
+    400296: R.Wing_middle.006_end_end
+    400298: R.Wing_middle.006_end_end_end
+    400300: Root
+    400302: Spine.001
+    400304: Spine.002
+    400306: Spine.003
+    400308: Spine.004
+    400310: Spine_CTRL
+    400312: Spine_CTRL_end
+    400314: Spine_CTRL_end_end
+    400316: Spine_CTRL_end_end_end
+    400318: Tail
+    400320: Tail.001
+    400322: Tail.002
+    400324: Tail.003
+    400326: Tail.003_end
+    400328: Tail.003_end_end
+    400330: Tail.003_end_end_end
+    400332: Tail.004
+    400334: Tail.004_end
+    400336: Tail.004_end_end
+    400338: Tail.004_end_end_end
+    4300000: Butterfly Body
+    4300002: Butterfly Wigs
+    7400000: Anim|Anim|Anim|Anim|Anim|Butterfly Effect 2 Take Flight and Land|Ani
+    7400002: Anim|Anim|Anim|Anim|Butterfly Effect 2 Take Flight and Land|Butterfl
+    9500000: //RootNode
+    13700000: Butterfly Body
+    13700002: Butterfly Wigs
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.03
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
