@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource RainSource;
     public AudioSource TigerSource;
     public AudioSource TreeSource;
+    public AudioSource Foot1Source;
+    public AudioSource Foot2Source;
 
 
     public GameObject SettingPanel;
@@ -18,6 +20,8 @@ public class SoundManager : MonoBehaviour
     public SliderCtr RainVolumeSlider;
     public SliderCtr TigerVolumeSlider;
     public SliderCtr TreeVolumeSlider;
+    public SliderCtr Foot1VolumeSlider;
+    public SliderCtr Foot2VolumeSlider;
     [Header("Data")]
     public SoundData Data = new SoundData();
     public bool IsShowSetting = false;
@@ -71,6 +75,8 @@ public class SoundManager : MonoBehaviour
             RainVolumeSlider.Val = Data.RainVolume;
             TigerVolumeSlider.Val = Data.TigerVolume;
             TreeVolumeSlider.Val = Data.TreeVolume;
+            Foot1VolumeSlider.Val = Data.Foot1Volume;
+            Foot2VolumeSlider.Val = Data.Foot2Volume;
 
             mIsLoad = true;
         }
@@ -92,6 +98,8 @@ public class SoundManager : MonoBehaviour
         Data.RainVolume = RainVolumeSlider.Val; 
         Data.TigerVolume = TigerVolumeSlider.Val;
         Data.TreeVolume = TreeVolumeSlider.Val;
+        Data.Foot1Volume = Foot1VolumeSlider.Val;
+        Data.Foot2Volume = Foot2VolumeSlider.Val;
         SetData();
 
     }
@@ -102,6 +110,8 @@ public class SoundManager : MonoBehaviour
         RainSource.volume = Data.RainVolume;
         TigerSource.volume = Data.TigerVolume;
         TreeSource.volume = Data.TreeVolume;
+        Foot1Source.volume = Data.Foot1Volume;
+        Foot2Source.volume = Data.Foot2Volume;
     }
 }
 
@@ -114,4 +124,6 @@ public class SoundData
     public float RainVolume = 0.2f;
     public float TigerVolume = 1f;
     public float TreeVolume = 0.5f;
+    public float Foot1Volume = 1f;
+    public float Foot2Volume = 1f;
 }

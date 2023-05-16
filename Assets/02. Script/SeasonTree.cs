@@ -30,6 +30,7 @@ public class SeasonTree : MonoBehaviour
     public TreeData Data;
 
     public int CurrentSeason = -1;
+    public float CurrentSeasonTime = 0;
     public bool IsCahnge = false;
     public float CurrentTime = 0;
     public float TargetTime = 5;
@@ -88,7 +89,8 @@ public class SeasonTree : MonoBehaviour
 
     private void Update()
     {
-        if(RabbitList != null)
+        CurrentSeasonTime += Time.deltaTime;
+        if (RabbitList != null)
         {
             foreach (var vfx in VfxList)
             {
@@ -153,6 +155,7 @@ public class SeasonTree : MonoBehaviour
     {
         SeasonDataChange(season);
 
+        CurrentSeasonTime = 0;
         BeforeTVal = -1;
         IsCahnge = true;
         CurrentTime = 0;
@@ -486,6 +489,10 @@ public class SeasonTree : MonoBehaviour
 public class TreeData
 {
     public int[] VfxAmount = new int[] { 200, 500, 1000, 2000, 2000 };
+}
+public enum SeasonType
+{
+    봄, 여름, 가을, 겨울, 겨울끝, 봄이전
 }
 
 

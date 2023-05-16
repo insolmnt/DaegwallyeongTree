@@ -1,0 +1,8 @@
+{
+    "BgmVolume": 0.0,
+    "EnvVolume": 1.0,
+    "RainVolume": 0.20000000298023225,
+    "TigerVolume": 1.0,
+    "TreeVolume": 0.5,
+    "FootVolume": 1.0
+}

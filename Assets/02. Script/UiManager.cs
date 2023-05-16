@@ -13,6 +13,7 @@ public class UiManager : MonoBehaviour
     public Text DebugText;
 
     public PlayableDirector MainTimeline;
+    public SeasonTree Manager;
 
     public GameObject[] ObjectList;
 
@@ -55,9 +56,10 @@ public class UiManager : MonoBehaviour
             return;
         }
 
-        if (DebugText.gameObject.activeSelf)
+        if (DebugText.gameObject.activeSelf && Manager.CurrentSeason >= 0)
         {
-            DebugText.text = "" + MainTimeline.time.ToString("F1") + " / " + MainTimeline.duration.ToString("F1");
+            DebugText.text = "" + MainTimeline.time.ToString("F1") + " / " + MainTimeline.duration.ToString("F1") + "\n" 
+                + ((SeasonType)(Manager.CurrentSeason)).ToString() + " - " + Manager.CurrentSeasonTime.ToString("F1");
         }
 
         if (Input.GetKeyDown(KeyCode.F12))
