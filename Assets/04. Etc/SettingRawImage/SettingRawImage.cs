@@ -9,6 +9,7 @@ public class SettingRawImage : MonoBehaviour
 {
     public string Section;
     public RawImageWarp Raw;
+    public List<RawImageWarp> SubRaw;
 
 
     public CanvasGroup KeystoneSettingPanel;
@@ -29,8 +30,14 @@ public class SettingRawImage : MonoBehaviour
     public Slider ViewRectYSlider;
     public Slider ViewRectHeightSlider;
 
+
+    public Texture2D LineTexture;
+
     [Header("Data")]
     public RawImageData Data;
+    private Texture CurrentTexture;
+    private bool IsShowLine = false;
+    public bool IsShowKeystoneSetting = false;
 
 
 
@@ -77,9 +84,27 @@ public class SettingRawImage : MonoBehaviour
         SetViewRect();
     }
 
+    public void ShowLine(bool isShow)
+    {
+        IsShowLine = isShow;
+        if (isShow)
+        {
+            CurrentTexture = Raw.texture;
+            Raw.texture = LineTexture;
+        }
+        else if(CurrentTexture != null)
+        {
+            Raw.texture = CurrentTexture;
+        }
+    }
+
     public void SetViewRect()
     {
         Raw.uvRect = Data.ViewRect;
+        foreach(var sub in SubRaw)
+        {
+            sub.uvRect = Data.ViewRect;
+        }
     }
     public void SetKeystone()
     {
@@ -146,14 +171,32 @@ public class SettingRawImage : MonoBehaviour
 
             Raw.bottomBezierHandleA = (Vector2)bottom + Data.BezierList[4];
             Raw.bottomBezierHandleB = -(Vector2)bottom + Data.BezierList[5];
+        }
 
+
+        foreach(var sub in SubRaw)
+        {
+            sub.cornerOffsetTR = Raw.cornerOffsetTR;
+            sub.cornerOffsetBR = Raw.cornerOffsetBR;
+            sub.cornerOffsetBL = Raw.cornerOffsetBL;
+            sub.cornerOffsetTL = Raw.cornerOffsetTL;
+
+            sub.topBezierHandleA = Raw.topBezierHandleA;
+            sub.topBezierHandleB = Raw.topBezierHandleB;
+
+            sub.leftBezierHandleA = Raw.leftBezierHandleA;
+            sub.leftBezierHandleB = Raw.leftBezierHandleB;
+
+            sub.rightBezierHandleA = Raw.rightBezierHandleA;
+            sub.rightBezierHandleB = Raw.rightBezierHandleB;
+
+            sub.bottomBezierHandleA = Raw.bottomBezierHandleA;
+            sub.bottomBezierHandleB = Raw.bottomBezierHandleB;
         }
     }
 
 
 
-    [Header("Data")]
-    public bool IsShowKeystoneSetting = false;
     private bool mIsLoad = false;
     public void ShowKeystoneSetting(bool isShow)
     {
@@ -189,6 +232,7 @@ public class SettingRawImage : MonoBehaviour
         }
         else
         {
+            ShowLine(false);
             gameObject.SetActive(false);
             Save();
         }
@@ -448,6 +492,12 @@ public class SettingRawImage : MonoBehaviour
         {
             return;
         }
+
+        if (Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            ShowLine(!IsShowLine);
+        }
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             for (int i = 0; i < 10; i++)

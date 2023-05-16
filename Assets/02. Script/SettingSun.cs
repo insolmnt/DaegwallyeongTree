@@ -70,7 +70,7 @@ public class SettingSun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (Input.GetKey(KeyCode.LeftShift) == false && Input.GetKeyDown(KeyCode.F2))
         {
             ShowSetting(!IsShowSetting);
         }

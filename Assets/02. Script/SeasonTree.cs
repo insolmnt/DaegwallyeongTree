@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 using DG.Tweening;
 using UnityEngine.Playables;
+using static UnityEngine.ParticleSystem;
 
 [ExecuteInEditMode]
 public class SeasonTree : MonoBehaviour
@@ -21,6 +22,9 @@ public class SeasonTree : MonoBehaviour
     [Header("동물 타임라인")]
     public PlayableDirector TigerTimeline;
     public PlayableDirector RabbitTimeline;
+    public GameObject[] RabbitList;
+
+    public Animator SnowFloor;
 
     [Header("Data")]
     public TreeData Data;
@@ -84,23 +88,33 @@ public class SeasonTree : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Alpha1))
-        //{
-        //    SeasonChange(0);
-        //}
-        //if (Input.GetKeyDown(KeyCode.Alpha2))
-        //{
-        //    SeasonChange(1);
-        //}
-        //if (Input.GetKeyDown(KeyCode.Alpha3))
-        //{
-        //    SeasonChange(2);
-        //}
-        //if (Input.GetKeyDown(KeyCode.Alpha4))
-        //{
-        //    SeasonChange(3);
-        //}
-        if (IsCahnge)
+        if(RabbitList != null)
+        {
+            foreach (var vfx in VfxList)
+            {
+                for (int i = 0; i < RabbitList.Length; i++)
+                {
+                    vfx.SetVector3("Cube Position " + i, RabbitList[i].transform.position);
+                }
+            }
+        }
+            //if (Input.GetKeyDown(KeyCode.Alpha1))
+            //{
+            //    SeasonChange(0);
+            //}
+            //if (Input.GetKeyDown(KeyCode.Alpha2))
+            //{
+            //    SeasonChange(1);
+            //}
+            //if (Input.GetKeyDown(KeyCode.Alpha3))
+            //{
+            //    SeasonChange(2);
+            //}
+            //if (Input.GetKeyDown(KeyCode.Alpha4))
+            //{
+            //    SeasonChange(3);
+            //}
+            if (IsCahnge)
         {
             CurrentTime += Time.deltaTime;
             if(CurrentTime >= TargetTime)
@@ -184,13 +198,16 @@ public class SeasonTree : MonoBehaviour
             ChangeFallingLeavesAmoutEvent = StartCoroutine(ChangeFallingLeavesAmout(TargetData.FallingLeavesAmout));
 
 
-            foreach (var pa in TargetData.Particle)
+            if(season != 1)
             {
-                var main = pa.main;
-                main.loop = true;
-                pa.gameObject.SetActive(false);
-                pa.gameObject.SetActive(true);
-                pa.Play();
+                foreach (var pa in TargetData.Particle)
+                {
+                    var main = pa.main;
+                        main.loop = true;
+                    pa.gameObject.SetActive(false);
+                    pa.gameObject.SetActive(true);
+                    pa.Play();
+                }
             }
         }
         CurrentSeason = season;
@@ -216,17 +233,63 @@ public class SeasonTree : MonoBehaviour
     }
     IEnumerator ShowVfx(VisualEffect vfx)
     {
-        float time = 0;
-
         vfx.SetFloat("Leaves Size", 0);
         vfx.gameObject.SetActive(true);
 
-        float targetTime = 5f;
-        while(time < targetTime)
+        yield return StartCoroutine(ChangeVfxVal(vfx, "Leaves Size", 1f));
+    }
+    IEnumerator ChangeVfxVal(VisualEffect vfx, string id, float target, float targetTime = 5f)
+    {
+        float time = 0;
+
+        float start = vfx.GetFloat(id);
+        while (time < targetTime)
         {
             time += Time.deltaTime;
             yield return null;
-            vfx.SetFloat("Leaves Size", Mathf.Lerp(0, 1.5f, time / targetTime));
+            vfx.SetFloat(id, Mathf.Lerp(start, target, time / targetTime));
+        }
+        vfx.SetFloat(id, target);
+    }
+    //IEnumerator ChangeLeavesSize(VisualEffect vfx, float target)
+    //{
+    //    float time = 0;
+
+    //    float start = vfx.GetFloat("Leaves Size");
+    //    float targetTime = 5f;
+    //    while (time < targetTime)
+    //    {
+    //        time += Time.deltaTime;
+    //        yield return null;
+    //        vfx.SetFloat("Leaves Size", Mathf.Lerp(start, target, time / targetTime));
+    //    }
+    //}
+
+    IEnumerator DonwVfx(VisualEffect vfx)
+    {
+        float time = 0;
+        float fadeTime = 5;
+        vfx.SetBool("Drop all leaves", true);
+
+        while (time < fadeTime)
+        {
+            time += Time.deltaTime;
+            yield return null;
+            vfx.SetFloat("Leaves motion", Mathf.Lerp(1, 0f, time / fadeTime));
+        }
+    }
+
+    IEnumerator ChangeParticleRate(ParticleSystem particle, float target, float fadeTime)
+    {
+        float time = 0;
+        var emission = particle.emission;
+        float start = emission.rateOverTime.constant;
+        while (time < fadeTime)
+        {
+            time += Time.deltaTime;
+            yield return null;
+
+            emission.rateOverTime = new MinMaxCurve(Mathf.Lerp(start, target, time / fadeTime));
         }
     }
 
@@ -235,10 +298,13 @@ public class SeasonTree : MonoBehaviour
         switch (season)
         {
             case 0:
+                SnowFloor.gameObject.SetActive(false);
                 TreeSnowMaterial.color = Color.clear;
                 foreach (var vfx in VfxList)
                 {
                     vfx.SetBool("Drop all leaves", false);
+                    vfx.SetFloat("Leaves motion", 1);
+                    vfx.SetFloat("Tunbulence Intensity", 0.3f);
                     vfx.gameObject.SetActive(false);
                 }
 
@@ -256,47 +322,95 @@ public class SeasonTree : MonoBehaviour
                 }
                 break;
             case 1:
+                foreach(var vfx in VfxList)
+                {
+                    yield return new WaitForSeconds(1f);
+                    StartCoroutine(ChangeVfxVal(vfx, "Leaves Size", 1.5f));
+                }
 
-                yield return new WaitForSeconds(5f);
                 foreach (var pa in SeasonData[0].Particle)
                 {
                     pa.gameObject.SetActive(false);
+                }
+
+                yield return new WaitForSeconds(10f);
+                foreach (var pa in TargetData.Particle)
+                {
+                    var main = pa.main;
+                    main.loop = true;
+                    var emission = pa.emission;
+                    emission.rateOverTime = 10;
+                    pa.gameObject.SetActive(false);
+                    pa.gameObject.SetActive(true);
+                    pa.Play();
+                }
+                StartCoroutine(ChangeParticleRate(TargetData.Particle[0], 100, 5));
+                yield return new WaitForSeconds(15f);
+                StartCoroutine(ChangeParticleRate(TargetData.Particle[0], 10, 5));
+                yield return new WaitForSeconds(4f);
+                foreach (var pa in TargetData.Particle)
+                {
+                    var main = pa.main;
+                    main.loop = false;
                 }
                 break;
 
 
             case 2:
+
+                foreach (var vfx in VfxList)
+                {
+                    StartCoroutine(ChangeVfxVal(vfx, "Collide Loss", 0f, 1f));
+                }
+
                 yield return new WaitForSeconds(7f);
-                VfxList[0].SetBool("Drop all leaves", true);
+                StartCoroutine(DonwVfx(VfxList[0]));
                 yield return new WaitForSeconds(5f);
-                VfxList[1].SetBool("Drop all leaves", true);
+                StartCoroutine(DonwVfx(VfxList[1]));
+                yield return new WaitForSeconds(15f);
+
+                StartCoroutine(ChangeVfxVal(VfxList[0], "Tunbulence Intensity", 0f, 3f));
+                StartCoroutine(ChangeVfxVal(VfxList[1], "Tunbulence Intensity", 0f, 3f));
                 break;
 
 
             case 3:
-                yield return new WaitForSeconds(3f);
-                TreeSnowMaterial.DOFade(0.7f, 3f);
+                yield return new WaitForSeconds(10f);
 
-                float time = 0;
-                float targetTime = 5f;
-                while (time < targetTime)
+                SnowFloor.gameObject.SetActive(true);
+
+                StartCoroutine(ChangeVfxVal(VfxList[0], "Leaves Size", 0f));
+                StartCoroutine(ChangeVfxVal(VfxList[1], "Leaves Size", 0f));
+
+                StartCoroutine(ChangeVfxVal(VfxList[2], "Leaves Size", 0.4f));
+                StartCoroutine(ChangeVfxVal(VfxList[3], "Leaves Size", 0.4f));
+                StartCoroutine(ChangeVfxVal(VfxList[4], "Leaves Size", 0.4f));
+                yield return new WaitForSeconds(3f);
+
+                StartCoroutine(DonwVfx(VfxList[2]));
+                yield return new WaitForSeconds(1f);
+                StartCoroutine(DonwVfx(VfxList[3]));
+                yield return new WaitForSeconds(1f);
+                StartCoroutine(DonwVfx(VfxList[4]));
+                yield return new WaitForSeconds(1f);
+
+                TreeSnowMaterial.DOFade(0.7f, 10f);
+
+
+                foreach (var vfx in VfxList)
                 {
-                    foreach (var vfx in VfxList)
-                    {
-                        time += Time.deltaTime;
-                        yield return null;
-                        vfx.SetFloat("Leaves Size", Mathf.Lerp(1.5f, 0.3f, time / targetTime));
-                    }
+                    StartCoroutine(ChangeVfxVal(vfx, "Collide Loss", 0.1f, 1f));
+                    StartCoroutine(ChangeVfxVal(vfx, "Tunbulence Intensity", 0.3f, 1f));
                 }
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(20f);
 
-                VfxList[2].SetBool("Drop all leaves", true);
-                yield return new WaitForSeconds(1f);
-                VfxList[3].SetBool("Drop all leaves", true);
-                yield return new WaitForSeconds(1f);
-                VfxList[4].SetBool("Drop all leaves", true);
-                yield return new WaitForSeconds(1f);
-
+                foreach (var pa in SeasonData[3].Particle)
+                {
+                    var main = pa.main;
+                    main.loop = false;
+                }
+                yield return new WaitForSeconds(20f);
+                SnowFloor.SetTrigger("Hide");
 
                 break;
 

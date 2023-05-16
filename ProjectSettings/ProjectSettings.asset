@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+      m_Icon: {fileID: 2800000, guid: 25b57f509e676514b9ea7573c90903eb, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -732,7 +732,7 @@ PlayerSettings:
     PS4: ENVIRO_LW
     PS5: ENVIRO_LW
     Stadia: ENVIRO_LW
-    Standalone: ENVIRO_LW
+    Standalone: ENVIRO_LW;UNISTORM_PRESENT
     WebGL: ENVIRO_LW
     Windows Store Apps: ENVIRO_LW
     XboxOne: ENVIRO_LW
