@@ -23,6 +23,7 @@ public class SettingSun : MonoBehaviour
     private bool mIsLoad = false;
     public void ShowSetting(bool isShow)
     {
+        Cursor.visible = isShow;
         IsShowSetting = isShow;
 
         SettingPanel.gameObject.SetActive(isShow);
@@ -70,7 +71,7 @@ public class SettingSun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) == false && Input.GetKeyDown(KeyCode.F2))
+        if (Input.GetKey(KeyCode.LeftShift) == false && Input.GetKeyDown(KeyCode.F3))
         {
             ShowSetting(!IsShowSetting);
         }

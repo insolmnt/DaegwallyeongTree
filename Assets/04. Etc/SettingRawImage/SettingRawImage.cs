@@ -200,6 +200,7 @@ public class SettingRawImage : MonoBehaviour
     private bool mIsLoad = false;
     public void ShowKeystoneSetting(bool isShow)
     {
+        Cursor.visible = isShow;
         keyCheck = false;
         keyDownTime = 0;
 
@@ -1118,10 +1119,10 @@ public class RawImageData
     /// </summary>
     public Vector2[] PointList = new Vector2[]
     {
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero
+        new Vector2(251, 277),
+        new Vector2(264, -172),
+        new Vector2(-729, -198),
+        new Vector2(-567, 340)
     };
 
     /// <summary>
@@ -1129,14 +1130,14 @@ public class RawImageData
     /// </summary>
     public Vector2[] BezierList = new Vector2[]
     {
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero,
-        Vector2.zero
+        new Vector2(112, -146),
+        new Vector2(0, -114),
+        new Vector2(),
+        new Vector2(),
+        new Vector2(172, 24),
+        new Vector2(50, 156),
+        new Vector2(15, -4),
+        new Vector2(32, -1)
     };
 
 
@@ -1155,7 +1156,7 @@ public class RawImageData
             1
     };
 
-    public bool FlipX = false;
-    public bool FlipY = false;
+    public bool FlipX = true;
+    public bool FlipY = true;
     public Rect ViewRect = new Rect(0, 0, 1, 1);
 }

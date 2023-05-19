@@ -313,10 +313,10 @@ public class SunManager : MonoBehaviour
 
 public class SunManagerData
 {
-    public float LocalLatitude = 37.67713f; //35.8393
-    public float LocalLongitude = 128.71834f; //128.4877
+    public float LocalLatitude = 37.712876f; //35.8393
+    public float LocalLongitude = 128.788179f; //128.4877
     public int StandrdLongitude = 135;
-    public float Rotation;
+    public float Rotation = 140;
     public int OffsetMinute = 0;
 
     public Color ShadowColor = new Color(0, 0, 0, 0.75f);

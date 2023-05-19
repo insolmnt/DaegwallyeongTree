@@ -11,6 +11,8 @@ namespace StartPage
         public const string AppVersion = "1.0.0";
         /// <summary>
         /// 1.0.0
+        /// 2023. 05. 17
+        /// 
         /// 2023. 05. 15
         /// 설치버전
         /// 

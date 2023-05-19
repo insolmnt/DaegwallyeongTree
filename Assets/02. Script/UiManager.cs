@@ -17,10 +17,36 @@ public class UiManager : MonoBehaviour
 
     public GameObject[] ObjectList;
 
+
+    [Header("Data")]
+    public int ShowFps = 0;
+    public int Fps = 0;
+    public float FpsTime = 0;
     private void Awake()
     {
         Instance = this;
     }
+
+    private void Start()
+    {
+        Cursor.visible = false;
+
+        Application.wantsToQuit += ApplicationQuit;
+    }
+    private bool ApplicationQuit()
+    {
+        Quit();
+        return false;
+    }
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+System.Diagnostics.Process.GetCurrentProcess().Kill();
+#endif
+    }
+
 
     public void ShowMessage(string str)
     {
@@ -38,6 +64,14 @@ public class UiManager : MonoBehaviour
 
     private void Update()
     {
+        FpsTime += Time.deltaTime;
+        Fps++;
+        if(FpsTime >= 1)
+        {
+            FpsTime -= 1;
+            ShowFps = Fps;
+            Fps = 0;
+        }
         if (Input.GetKey(KeyCode.LeftShift))
         {
             for (int i = 0; i < ObjectList.Length; i++)
@@ -51,20 +85,22 @@ public class UiManager : MonoBehaviour
         }
 
 
-        if (CamManager.Instance.CamRawImage.IsShowKeystoneSetting)
-        {
-            return;
-        }
-
-        if (DebugText.gameObject.activeSelf && Manager.CurrentSeason >= 0)
-        {
-            DebugText.text = "" + MainTimeline.time.ToString("F1") + " / " + MainTimeline.duration.ToString("F1") + "\n" 
-                + ((SeasonType)(Manager.CurrentSeason)).ToString() + " - " + Manager.CurrentSeasonTime.ToString("F1");
-        }
 
         if (Input.GetKeyDown(KeyCode.F12))
         {
             DebugText.gameObject.SetActive(!DebugText.gameObject.activeSelf);
+        }
+
+        if (DebugText.gameObject.activeSelf && Manager.CurrentSeason >= 0)
+        {
+            DebugText.text = "FPS : " + ShowFps + "\n" + MainTimeline.time.ToString("F1") + " / " + MainTimeline.duration.ToString("F1") + "\n"
+                + ((SeasonType)(Manager.CurrentSeason)).ToString() + " - " + Manager.CurrentSeasonTime.ToString("F1");
+        }
+
+
+        if (CamManager.Instance.CamRawImage.IsShowKeystoneSetting)
+        {
+            return;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -100,5 +136,10 @@ public class UiManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+
+    public void SetTime(float time)
+    {
+        MainTimeline.time = time;
     }
 }

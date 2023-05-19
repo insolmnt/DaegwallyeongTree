@@ -26,6 +26,15 @@ public class SeasonTree : MonoBehaviour
 
     public Animator SnowFloor;
 
+
+    [Header("¼³Á¤")]
+    public GameObject SettingPanel;
+    private bool mIsLoad = false;
+    public bool IsShowSetting = false;
+    public SliderCtr RotationSlider;
+    public SliderCtr ScaleSlider;
+    public SliderCtr[] CountSlider;
+
     [Header("Data")]
     public TreeData Data;
 
@@ -81,14 +90,15 @@ public class SeasonTree : MonoBehaviour
             Data = new TreeData();
         }
 
-        for(int i=0; i<5; i++)
-        {
-            VfxList[i].SetFloat("Leaves Amount", Data.VfxAmount[i]);
-        }
+        SetData();
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            ShowSetting(!IsShowSetting);
+        }
         CurrentSeasonTime += Time.deltaTime;
         if (RabbitList != null)
         {
@@ -298,6 +308,7 @@ public class SeasonTree : MonoBehaviour
 
     IEnumerator Season(int season)
     {
+        CurrentSeasonTime = 0;
         switch (season)
         {
             case 0:
@@ -308,6 +319,7 @@ public class SeasonTree : MonoBehaviour
                     vfx.SetBool("Drop all leaves", false);
                     vfx.SetFloat("Leaves motion", 1);
                     vfx.SetFloat("Tunbulence Intensity", 0.3f);
+                    //vfx.SetFloat("Alpha", 1f);
                     vfx.gameObject.SetActive(false);
                 }
 
@@ -374,6 +386,9 @@ public class SeasonTree : MonoBehaviour
 
                 StartCoroutine(ChangeVfxVal(VfxList[0], "Tunbulence Intensity", 0f, 3f));
                 StartCoroutine(ChangeVfxVal(VfxList[1], "Tunbulence Intensity", 0f, 3f));
+
+                //StartCoroutine(ChangeVfxVal(VfxList[0], "Alpha", 0.5f, 3f));
+                //StartCoroutine(ChangeVfxVal(VfxList[1], "Alpha", 0.5f, 3f));
                 break;
 
 
@@ -483,12 +498,65 @@ public class SeasonTree : MonoBehaviour
         SetSeason(3);
     }
 
+    public void SetData()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            VfxList[i].SetFloat("Leaves Amount", Data.VfxAmount[i]);
+        }
+
+        TreeAnimator.transform.parent.localScale = Vector3.one * Data.Scale;
+        TreeAnimator.transform.parent.localEulerAngles = new Vector3(0, Data.Rotation, 0);
+
+    }
+    public void ShowSetting(bool isShow)
+    {
+        Cursor.visible = isShow;
+        IsShowSetting = isShow;
+        SettingPanel.gameObject.SetActive(IsShowSetting);
+        if (isShow)
+        {
+            mIsLoad = false;
+
+            RotationSlider.Val = Data.Rotation;
+            ScaleSlider.Val = Data.Scale;
+            for (int i = 0; i < Data.VfxAmount.Length; i++)
+            {
+                CountSlider[i].Val = Data.VfxAmount[i];
+            }
+
+            mIsLoad = true;
+        }
+        else
+        {
+            Save();
+        }
+    }
+    public void OnSettingChange()
+    {
+        if(mIsLoad == false)
+        {
+            return;
+        }
+
+        Data.Rotation = RotationSlider.Val;
+        Data.Scale = ScaleSlider.Val;
+        for(int i=0; i < Data.VfxAmount.Length; i++)
+        {
+            Data.VfxAmount[i] = (int)CountSlider[i].Val;
+        }
+
+        SetData();
+    }
+
 }
 
 [System.Serializable]
 public class TreeData
 {
     public int[] VfxAmount = new int[] { 200, 500, 1000, 2000, 2000 };
+    public float Rotation = 45;
+    public float Scale = 1;
 }
 public enum SeasonType
 {

@@ -33,7 +33,7 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) == false && Input.GetKeyDown(KeyCode.F3))
+        if (Input.GetKey(KeyCode.LeftShift) == false && Input.GetKeyDown(KeyCode.F2))
         {
             ShowSetting(!IsShowSetting);
         }
@@ -65,6 +65,7 @@ public class SoundManager : MonoBehaviour
 
     public void ShowSetting(bool isShow)
     {
+        Cursor.visible = isShow;
         SettingPanel.gameObject.SetActive(isShow);
         IsShowSetting = isShow;
         if (isShow)
