@@ -16,6 +16,8 @@ public class SettingSun : MonoBehaviour
 
     public Image ShadowColorImage;
 
+    public SliderCtr SnowSlider;
+
 
     [Header("Data")]
     public bool IsShowSetting = false;
@@ -27,6 +29,7 @@ public class SettingSun : MonoBehaviour
         IsShowSetting = isShow;
 
         SettingPanel.gameObject.SetActive(isShow);
+        //Manager.SnowObject.gameObject.SetActive(isShow);
 
         if (isShow)
         {
@@ -36,6 +39,7 @@ public class SettingSun : MonoBehaviour
             TimeOffsetSlider.Val = Manager.Data.OffsetMinute;
             ShadowColorImage.color = Manager.Data.ShadowColor;
 
+            SnowSlider.Val = Manager.Data.SnowPosition;
             mIsLoad = true;
         }
         else
@@ -53,6 +57,9 @@ public class SettingSun : MonoBehaviour
 
         Manager.Data.Rotation = RotationSlider.Val;
         Manager.Data.OffsetMinute = (int)TimeOffsetSlider.Val;
+
+
+        Manager.Data.SnowPosition = SnowSlider.Val;
 
         Manager.SetRotation();
         Manager.Ca();
@@ -80,10 +87,6 @@ public class SettingSun : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ShowSetting(false);
-        }
 
         DateTimeText.text = DateTime.Now.AddMinutes(Manager.Data.OffsetMinute).ToString("[yyyy-MM-dd] HH:mm:ss");
     }

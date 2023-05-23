@@ -524,10 +524,6 @@ public class SettingRawImage : MonoBehaviour
                     }
                 });
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ShowKeystoneSetting(false);
-        }
 
         if (Input.GetKeyDown(KeyCode.Slash))
         {

@@ -8,8 +8,15 @@ namespace StartPage
     public class Config
     {
         // !! 현재 프로그램 버전
-        public const string AppVersion = "1.0.0";
+        public const string AppVersion = "1.0.1";
         /// <summary>
+        /// 1.0.1
+        /// 2023. 05. 23
+        /// 발자국 소리 변경
+        /// 나뭇잎 그림자 수정
+        /// ESC 프로그램 종료 기능 추가
+        /// 바닥눈 위치설정 기능 추가
+        /// 
         /// 1.0.0
         /// 2023. 05. 17
         /// 

@@ -39,6 +39,8 @@ public class SunManager : MonoBehaviour
     public float solar_azimuth2;
     public float solar_zenith_angle;
 
+    [Header("¹Ù´Ú ´«")]
+    public GameObject SnowObject;
 
     private void Start()
     {
@@ -99,6 +101,7 @@ public class SunManager : MonoBehaviour
     public void SetRotation()
     {
         transform.localEulerAngles = new Vector3(0, Data.Rotation, 0);
+        SnowObject.transform.localPosition = new Vector3(0, -0.8f, Data.SnowPosition);
     }
 
     [ContextMenu("°è»ê")]
@@ -320,4 +323,6 @@ public class SunManagerData
     public int OffsetMinute = 0;
 
     public Color ShadowColor = new Color(0, 0, 0, 0.75f);
+
+    public float SnowPosition = 3.4f;
 }

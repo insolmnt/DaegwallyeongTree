@@ -29,7 +29,7 @@ public class ShutdownManager : MonoBehaviour
     private DateTime TargetDateTime;
     private bool mIsLoadEnd = false;
 
-    private bool mIsSettingView = false;
+    public bool IsSettingView = false;
 
     private bool beforCursorVisible;
 
@@ -49,10 +49,10 @@ public class ShutdownManager : MonoBehaviour
     /// <param name="isShow"></param>
     public void ShowSettingPanel(bool isShow)
     {
-        mIsSettingView = isShow;
+        IsSettingView = isShow;
 
-        ShutdownSettingPanel.gameObject.SetActive(mIsSettingView);
-        if (mIsSettingView)
+        ShutdownSettingPanel.gameObject.SetActive(IsSettingView);
+        if (IsSettingView)
         {
             beforCursorVisible = Cursor.visible;
             Cursor.visible = true;
@@ -112,7 +112,7 @@ public class ShutdownManager : MonoBehaviour
     {
         if (IsKeyCodeUse && Input.GetKeyDown(KeyCode))
         {
-            ShowSettingPanel(!mIsSettingView);
+            ShowSettingPanel(!IsSettingView);
         }
 
         CurrentTime += Time.deltaTime;

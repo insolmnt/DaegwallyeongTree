@@ -9,6 +9,12 @@ public class UiManager : MonoBehaviour
     static public UiManager Instance;
 
 
+    public SettingSun SettingSun;
+    public SoundManager SettingSound;
+    public SettingRawImage SettingImage;
+    public ShutdownManager SettingShutdown;
+    public SeasonTree SettingTree;
+
     public Text MsgText;
     public Text DebugText;
 
@@ -84,6 +90,53 @@ System.Diagnostics.Process.GetCurrentProcess().Kill();
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (MsgBox.IsShow)
+            {
+                MsgBox.Close();
+            }
+            else if (SettingShutdown.IsSettingView)
+            {
+                SettingShutdown.ShowSettingPanel(false);
+            }
+            else if (SettingSun.IsShowSetting)
+            {
+                SettingSun.ShowSetting(false);
+            }
+            else if (SettingSound.IsShowSetting)
+            {
+                SettingSound.ShowSetting(false);
+            }
+            else if (SettingImage.IsShowKeystoneSetting)
+            {
+                SettingImage.ShowKeystoneSetting(false);
+            }
+            else if(SettingTree.IsShowSetting)
+            {
+                SettingTree.ShowSetting(false);
+            }
+            else
+            {
+                MsgBox.Show("프로그램을 종료하시겠습니까?").SetButtonType(MsgBoxButtons.OK_CANCEL).OnResult((result) =>
+                {
+                    switch (result)
+                    {
+                        case DialogResult.YES_OK:
+                            Quit();
+                            break;
+                    }
+                });
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (MsgBox.IsShow)
+            {
+                MsgBox._lastMsgBox.ButtonClickEvent((int)DialogResult.YES_OK);
+            }
+        }
 
 
         if (Input.GetKeyDown(KeyCode.F12))

@@ -1275,7 +1275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 10.030506, y: -301.1}
+  m_AnchoredPosition: {x: 10.030506, y: -332.2}
   m_SizeDelta: {x: 252.9684, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98210955
@@ -1386,8 +1386,8 @@ RectTransform:
   m_Father: {fileID: 341734743}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1726,6 +1726,7 @@ MonoBehaviour:
     Rotation: 0
     OffsetMinute: 0
     ShadowColor: {r: 0, g: 0, b: 0, a: 0.75}
+    SnowPosition: 3.4
   IsNow: 1
   Year: 2023
   Month: 3
@@ -1743,6 +1744,7 @@ MonoBehaviour:
   solar_azimuth: 7.524288
   solar_azimuth2: 172.47571
   solar_zenith_angle: 61.30091
+  SnowObject: {fileID: 578581976}
   Sun: {fileID: 240991041}
   internalHour: 14
 --- !u!4 &202312601 stripped
@@ -1846,7 +1848,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 1
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -1867,7 +1869,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 3.0159678
+      - m_Value: 5
         m_Name: Falling leaves Amount
         m_Overridden: 1
       - m_Value: 0
@@ -3206,7 +3208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 10.030506, y: -252.6}
+  m_AnchoredPosition: {x: 10.030506, y: -263.4}
   m_SizeDelta: {x: 252.9684, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325805620
@@ -3788,7 +3790,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 1
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -3809,7 +3811,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 3.0159678
+      - m_Value: 5
         m_Name: Falling leaves Amount
         m_Overridden: 1
       - m_Value: 0
@@ -10892,11 +10894,11 @@ MonoBehaviour:
     Rotation: 45
     Scale: 1
   CurrentSeason: 0
-  CurrentSeasonTime: 0.120000005
-  IsCahnge: 1
-  CurrentTime: 0.120000005
+  CurrentSeasonTime: 1.1200001
+  IsCahnge: 0
+  CurrentTime: 1
   TargetTime: 1
-  TVal: 0.120000005
+  TVal: 1
   TargetData: {fileID: 73102359}
   StartLeavesColors:
     serializedVersion: 2
@@ -20129,10 +20131,10 @@ RectTransform:
   m_Father: {fileID: 150358140}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -339.44473}
-  m_SizeDelta: {x: 385.64, y: 325.5672}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 385.64, y: 361.7632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998359153
 MonoBehaviour:
@@ -21020,7 +21022,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBC1C\uC790\uAD6D"
+  m_Text: "\uD638\uB791\uC774\n\uBC1C\uC790\uAD6D"
 --- !u!222 &1020251940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23695,6 +23697,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260444060}
   m_CullTransparentMesh: 1
+--- !u!114 &1282532250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11454220, guid: e3f71f8cffd15cd4fa922728e3949849, type: 3}
+  m_PrefabInstance: {fileID: 1791196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac64da1e4e48a6d41911a2ce995afa66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1298750077
 GameObject:
   m_ObjectHideFlags: 0
@@ -24193,7 +24206,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 1
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -24214,7 +24227,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 3.0159678
+      - m_Value: 5
         m_Name: Falling leaves Amount
         m_Overridden: 1
       - m_Value: 0
@@ -24974,7 +24987,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 1
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -24995,7 +25008,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 3.0159678
+      - m_Value: 5
         m_Name: Falling leaves Amount
         m_Overridden: 1
       - m_Value: 0
@@ -25156,7 +25169,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26611,7 +26624,7 @@ VisualEffect:
       - m_Value: 0.5
         m_Name: Wind Intensity
         m_Overridden: 0
-      - m_Value: 1.5
+      - m_Value: 1
         m_Name: Leaves Size
         m_Overridden: 1
       - m_Value: 0.633
@@ -26632,7 +26645,7 @@ VisualEffect:
       - m_Value: 2.55
         m_Name: Blend Noise
         m_Overridden: 1
-      - m_Value: 3.0159678
+      - m_Value: 5
         m_Name: Falling leaves Amount
         m_Overridden: 1
       - m_Value: 0
@@ -28070,6 +28083,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b8759e5f9adf74a9ec77876c56cdfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SettingSun: {fileID: 2034220838}
+  SettingSound: {fileID: 2012337832}
+  SettingImage: {fileID: 85000610}
+  SettingShutdown: {fileID: 1282532250}
+  SettingTree: {fileID: 878335453}
   MsgText: {fileID: 561377035}
   DebugText: {fileID: 48792970}
   MainTimeline: {fileID: 454049527}
@@ -33122,6 +33140,7 @@ MonoBehaviour:
   RotationSlider: {fileID: 616848449}
   TimeOffsetSlider: {fileID: 1769221255}
   ShadowColorImage: {fileID: 883594944}
+  SnowSlider: {fileID: 0}
   IsShowSetting: 0
 --- !u!4 &2034220839
 Transform:
@@ -35313,7 +35332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2009815950785693580
 MonoBehaviour:
   m_ObjectHideFlags: 0

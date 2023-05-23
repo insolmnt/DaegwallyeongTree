@@ -41,11 +41,6 @@ public class SoundManager : MonoBehaviour
         {
             return;
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ShowSetting(false);
-        }
     }
     public void Save()
     {
